@@ -11,6 +11,9 @@ module.exports = {
     sourceMap: sourceMapEnabled,
     extract: isProduction
   }),
+  postcss: [
+    require('postcss-px2rem')({'remUnit':36})  //转换比值
+  ],
   cssSourceMap: sourceMapEnabled,
   cacheBusting: config.dev.cacheBusting,
   transformToRequire: {
